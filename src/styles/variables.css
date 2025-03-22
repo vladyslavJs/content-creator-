@@ -1,0 +1,21 @@
+:root {
+    /* main-color */
+    --primary-color: #FF4433;
+    --secondary-color: #FFF5EE;
+    --third-color: #000000;
+
+    /* background */
+    --background-color: #FFFFFF;
+
+    /* hover and focus */
+    --secondary-hover: #545b62;
+    --secondary-focus: #3e444a;
+
+    /* fonts */
+    --main-font: "Sora", sans-serif;
+    --secondary-font: "Inter", sans-serif;
+
+    /* animation */
+    --transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
