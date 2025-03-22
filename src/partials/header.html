@@ -1,7 +1,37 @@
-<nav>
-    <ul>
-        <li><a href="#about">Про мене</a></li>
-        <li><a href="#portfolio">Портфоліо</a></li>
-        <li><a href="#contact">Контакти</a></li>
-    </ul>
-</nav>
+<div class="container header-container">
+    <a href="./index.html" class="logo">mood.</a>
+    <nav class="nav-bar">
+        <ul class="nav-menu">
+            <li class="nav-list"><a href="#домашня">Домашня</a></li>
+            <li class="nav-list"><a href="#промене">Про мене</a></li>
+            <li class="nav-list"><a href="#послуги">Послуги</a></li>
+            <li class="nav-list"><a href="#підкаст">Підкаст</a></li>
+            <li class="nav-list"><a href="#контакт">Контакт</a></li>
+        </ul>
+    </nav>
+    <!-- burger-icon -->
+    <button class="burger-button-icon">
+        <svg class="burger-button-style" aria-label="burger icon">
+            <use href="/sprite.svg#burger-icon"></use>
+        </svg>
+    </button>
+</div>
+<!-- mobile-menu -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-container">
+        <button class="close-button-icon">
+            <svg class="close-button-style" aria-label="close icon">
+                <use href="/sprite.svg#icon-exit"></use>
+            </svg>
+        </button>
+        <nav class="nav-menu">
+            <ul class="nav-list-mobile-menu">
+                <li><a href="домашня"></a>Домашня</li>
+                <li><a href="промене"></a>Про мене</li>
+                <li><a href="послуги"></a>Послуги</li>
+                <li><a href="підкаст"></a>Підкаст</li>
+                <li><a href="контакт"></a>Контакт</li>
+            </ul>
+        </nav>
+    </div>
+</div>
