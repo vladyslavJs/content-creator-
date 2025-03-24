@@ -62,8 +62,8 @@ button {
 
 svg {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     stroke: var(--third-color);
 }
 
