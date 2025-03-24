@@ -1,16 +1,3 @@
-// // open and close mobile menu
-// const mobileMenu = document.getElementById("mobile-menu");
-// const openMenuBtn = document.querySelector(".burger-button-icon");
-// const closeMenuBtn = document.querySelector(".close-button-icon");
-
-// openMenuBtn.addEventListener("click", () => {
-//     mobileMenu.classList.add("active");
-// });
-
-// closeMenuBtn.addEventListener("click", () => {
-//     mobileMenu.classList.remove("active");
-// });
-
 document.addEventListener("DOMContentLoaded", async () => {
     console.log("Завантаження `header.html`...");
 
@@ -20,29 +7,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         const headerElement = document.getElementById('header');
 
         if (!headerElement) {
-            console.error("Елемент #header не знайдено!");
+            console.error("header not found");
             return;
         }
 
         headerElement.innerHTML = headerHTML;
         console.log("Header завантажений!");
 
-        // Після вставки меню, ініціалізуємо його
+        // initialization menu
         initMenu();
     } catch (error) {
-        console.error("Помилка завантаження `header.html`:", error);
+        console.error("something wrong", error);
     }
 });
 
 function initMenu() {
-    console.log("Ініціалізація меню...");
+    console.log("load menu...");
 
     const mobileMenu = document.getElementById("mobile-menu");
     const openMenuBtn = document.querySelector(".burger-button-icon");
     const closeMenuBtn = document.querySelector(".close-button-icon");
 
     if (!mobileMenu || !openMenuBtn || !closeMenuBtn) {
-        console.error("Елементи меню не знайдені!");
+        console.error("elements not found");
         return;
     }
 
@@ -53,6 +40,7 @@ function initMenu() {
     closeMenuBtn.addEventListener("click", () => {
         mobileMenu.classList.remove("active");
     });
-
-    console.log("Меню завантажено!");
+    console.log("Menu is loaded");
 }
+
+
