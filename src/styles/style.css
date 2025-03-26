@@ -62,13 +62,7 @@ button {
 
 svg {
     display: block;
-    width: 12px;
-    height: 12px;
-    stroke: var(--third-color);
+    width: 35px;
+    height: 35px;
+    stroke: var(--secondary-color);
 }
-
-  /* color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s; */
