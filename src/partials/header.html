@@ -2,7 +2,7 @@
     <a href="./header.html" class="logo">sashabardas</a>
     <nav class="nav-bar">
         <ul class="nav-menu">
-            <li class="nav-list"><a href="#домашня">Домашня</a></li>
+            <li class="nav-list"><a href="#home">Домашня</a></li>
             <li class="nav-list"><a href="#промене">Про мене</a></li>
             <li class="nav-list"><a href="#послуги">Послуги</a></li>
             <li class="nav-list"><a href="#підкаст">Підкаст</a></li>
@@ -19,14 +19,17 @@
 <!-- mobile-menu -->
 <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu-container">
-        <button class="close-button-icon">
-            <svg class="close-button-style" aria-label="close icon">
-                <use href="/sprite.svg#icon-exit"></use>
-            </svg>
-        </button>
+        <div class="mobile-header-container">
+            <a href="./header.html" class="logo">sashabardas</a>
+            <button class="close-button-icon">
+                <svg class="close-button-style" aria-label="close icon">
+                    <use href="/sprite.svg#icon-exit"></use>
+                </svg>
+            </button>
+        </div>
         <nav class="nav-menu">
             <ul class="nav-list-mobile-menu">
-                <li><a href="домашня"></a>home</li>
+                <li class="active-link"><a href="home"></a>home</li>
                 <li><a href="промене"></a>about me</li>
                 <li><a href="послуги"></a>price</li>
                 <li><a href="підкаст"></a>portfolio</li>
@@ -35,19 +38,19 @@
         <ul class="social-media-container">
             <li class="socail-media-list">
                 <svg>
-                    <use class="color-icon" href="/sprite.svg#icon-instagram"></use>
+                    <use class="color-icon-instagram" href="/sprite.svg#icon-instagram"></use>
                 </svg>
                 <a href="" class="social-media-link">instagram</a>
             </li>
             <li class="socail-media-list">
                 <svg>
-                    <use class="color-icon" href="/sprite.svg#icon-telegram"></use>
+                    <use class="color-icon-telegram" href="/sprite.svg#icon-telegram"></use>
                 </svg>
                 <a href="">telegram</a>
             </li>
             <li class="socail-media-list">
                 <svg>
-                    <use class="color-icon" href="/sprite.svg#icon-mail"></use>
+                    <use class="color-icon-gmail" href="/sprite.svg#icon-mail"></use>
                 </svg>
                 <a href="">mail.google</a>
             </li>
