@@ -80,6 +80,11 @@
     transition: 0.7 ease;
 }
 
+.hvr-sweep-to-right::before {
+    background: var(--primary-color) !important;
+}
+
+
 /* socail media container */
 .social-media-container {
     display: flex;
