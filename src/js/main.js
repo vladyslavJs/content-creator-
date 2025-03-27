@@ -1,5 +1,12 @@
+// import gsap from "gsap";
+
+import { initMenu } from "./mobile-menu";
+import { animateNav } from "./animation";
+import 'hover.css/css/hover-min.css';
+
+
 document.addEventListener("DOMContentLoaded", async () => {
-    console.log("Завантаження `header.html`...");
+    console.log("loading `header.html`...");
 
     try {
         const response = await fetch('src/partials/header.html');
@@ -12,35 +19,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         headerElement.innerHTML = headerHTML;
-        console.log("Header завантажений!");
+        console.log("Header is loaded!");
 
-        // initialization menu
         initMenu();
     } catch (error) {
-        console.error("something wrong", error);
+        console.error("something wrong, please again", error);
     }
+
+    animateNav();
+
 });
-
-function initMenu() {
-    console.log("load menu...");
-
-    const mobileMenu = document.getElementById("mobile-menu");
-    const openMenuBtn = document.querySelector(".burger-button-icon");
-    const closeMenuBtn = document.querySelector(".close-button-icon");
-
-    if (!mobileMenu || !openMenuBtn || !closeMenuBtn) {
-        console.error("elements not found");
-        return;
-    }
-
-    openMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.add("active");
-    });
-
-    closeMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
-    });
-    console.log("Menu is loaded");
-}
-
-
