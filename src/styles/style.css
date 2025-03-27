@@ -34,6 +34,11 @@ p {
     margin: 0;
 }
 
+li {
+    text-decoration: none
+}
+
+
 ul {
     list-style-type: none;
     margin-top: 0;
