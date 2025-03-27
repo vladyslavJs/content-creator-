@@ -12,6 +12,8 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
+    "gsap": "^3.12.7",
+    "hover.css": "^2.3.2",
     "modern-normalize": "^3.0.1"
   }
 }
