@@ -69,7 +69,15 @@
     font-weight: 400; 
     text-transform: uppercase;
     font-size: 22px;
-    line-height: 1.2;
+    line-height: 0.9em;
+    cursor: pointer;
+}
+
+.opacity-about:hover,
+.opacity-about:focus {
+    color: #808080;
+    opacity: 0.5;
+    transition: 0.7 ease;
 }
 
 /* socail media container */
@@ -104,9 +112,10 @@
 
 @media screen and (min-width: 1024px) {
     .nav-list-mobile-menu {
-        font-size: 80px;
+        font-size: 86px;
         align-items: flex-start;
         margin-top: 40px;
+        font-weight: 300;
     }
 
     .social-media-container {
