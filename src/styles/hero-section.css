@@ -1,0 +1,10 @@
+
+@media screen and (min-width: 1024px) {
+    .main-title {
+        font-size: 96px;
+        font-weight: 400;
+        color: var(--background-color);
+        text-align: center;
+        align-items: center;
+    }
+}
