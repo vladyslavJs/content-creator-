@@ -3,6 +3,7 @@
 import { initMenu } from "./mobile-menu";
 import { animateNav } from "./animation";
 import 'hover.css/css/hover-min.css';
+import { loadSections } from "./loadSection";
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -25,6 +26,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (error) {
         console.error("something wrong, please again", error);
     }
+
+    await loadSections();
 
     animateNav();
 
