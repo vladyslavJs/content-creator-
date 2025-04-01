@@ -11,6 +11,8 @@ export function initMenu() {
     }
 
     openMenuBtn.addEventListener("click", () => {
+        //visible menu begin animation
+        mobileMenu.style.visibility = "visible";
         mobileMenu.classList.add("active");
     });
 
@@ -18,6 +20,14 @@ export function initMenu() {
         mobileMenu.classList.remove("active");
     });
 
+    // event after end animation
+    mobileMenu.addEventListener("transitionend", () => {
+        if (!mobileMenu.classList.contains("active")) {
+            mobileMenu.style.visibility = "hidden";
+        }
+    });
+
     console.log("menu is loaded");
 }
+
 
