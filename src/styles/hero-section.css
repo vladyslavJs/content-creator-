@@ -1,10 +1,54 @@
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
 
-@media screen and (min-width: 1024px) {
-    .main-title {
-        font-size: 96px;
-        font-weight: 400;
-        color: var(--background-color);
-        text-align: center;
-        align-items: center;
+.text-wrapper {
+    display: flex;
+    gap: 40px;
+    font-size: 96px;
+    font-weight: 300;
+    color: #f5f1e8;
+    position: absolute;
+}
+
+
+.first-word {
+    position: relative;
+    z-index: 1;
+    bottom: 30px;
+    right: 30px;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+}
+
+.second-word {
+    position: relative;
+    top: 30px;
+    left: 70px;
+    color: var(--background-color);
+    text-transform: uppercase;
+    font-family: var(--main-font);
+}
+
+.hero-image img {
+    width: 350px;
+    display: block;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
