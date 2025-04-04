@@ -1,10 +1,20 @@
 .aboutme-section {
-    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.text-wrapper {
-    display: flex;
-    font-size: 18px;
+
+
+.text-container {
+    /* display: flex; */
+    /* font-size: 18px;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    max-width: 400px; */
+    font-size: 18px;
+    max-width: 500px;
+    text-align: center;
+    font-weight: 200;
 }
