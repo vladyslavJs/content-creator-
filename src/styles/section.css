@@ -1,6 +1,7 @@
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     background: var(--third-color);
+    width: 100%;
 }
 
 [data-section] {
