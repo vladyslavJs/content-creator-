@@ -22,13 +22,15 @@ section {
 
 /* ------ */
 .scroll-container {
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    position: relative;
+    text-align: center;
+        margin: 40px 0;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        position: relative;
 }
 
 .hidden {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     pointer-events: none;
 }
 

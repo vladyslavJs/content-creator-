@@ -26,29 +26,29 @@
 //     })
 // }
 
-// export function setupScrollLine() {
-//     const mainSection = document.querySelector("main");
-//     const scrollContainer = document.querySelector(".scroll-container");
+export function setupScrollLine() {
+    const mainSection = document.querySelector("main");
+    const scrollContainer = document.querySelector(".scroll-container");
 
-//     if (!mainSection || !scrollContainer) {
-//         console.warn("Не знайдено один з елементів для Scroll Line");
-//         return;
-//     }
+    if (!mainSection || !scrollContainer) {
+        console.loge("Не знайдено один з елементів для Scroll Line");
+        return;
+    }
 
-//     // Переміщуємо .scroll-container після main
-//     mainSection.insertAdjacentElement("afterend", scrollContainer);
+    // Переміщуємо .scroll-container після main
+    mainSection.insertAdjacentElement("afterend", scrollContainer);
 
-//     let lastScrollY = window.scrollY;
+    let lastScrollY = window.scrollY;
 
-//     window.addEventListener("scroll", () => {
-//         let currentScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+        let currentScrollY = window.scrollY;
 
-//         if (currentScrollY < lastScrollY) {
-//             scrollContainer.classList.remove("hidden"); // Показуємо при скролі вгору
-//         } else {
-//             scrollContainer.classList.add("hidden"); // Ховаємо при скролі вниз
-//         }
+        if (currentScrollY < lastScrollY) {
+            scrollContainer.classList.remove("hidden"); // Показуємо при скролі вгору
+        } else {
+            scrollContainer.classList.add("hidden"); // Ховаємо при скролі вниз
+        }
 
-//         lastScrollY = currentScrollY; // Оновлюємо значення для порівняння
-//     });
-// }
+        lastScrollY = currentScrollY; // Оновлюємо значення для порівняння
+    });
+}

@@ -4,7 +4,7 @@ import { initMenu } from "./mobile-menu";
 import { animateNav } from "./animation";
 import 'hover.css/css/hover-min.css';
 import { loadSections } from "./loadSection";
-// import { setupScrollLine } from "./scroll-line";
+import { setupScrollLine } from "./scroll-line";
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await loadSections();
 
-    // setupScrollLine();
+    setupScrollLine();
     animateNav();
 
 
