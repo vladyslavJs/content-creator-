@@ -1,54 +1,41 @@
-// export function setupScrollLine() {
-//     const mainSection = document.querySelector("main");
-//     const scrollContainer = document.querySelector(".scroll-container");
-
-//     if (!mainSection || !scrollContainer) {
-//         console.warn("Not found element for Scroll or Line");
-//         return;
-//     }
-
-//     //add .scroll-container after main
-//     mainSection.insertAdjacentElement("afterend", scrollContainer);
-
-//     let lastScrollY = window.scrollY;
-
-//     //listening event
-//     window.addEventListener("scroll", () => {
-//         let currentScrolly = window.scrollY;
-
-//         if (currentScrolly < lastScrollY) {
-//             scrollContainer.classList.remove("hidden");
-//         } else {
-//             scrollContainer.classList.add("hidden");
-//         }
-
-//         lastScrollY = currentScrolly;
-//     })
-// }
+import gsap from "gsap";
 
 export function setupScrollLine() {
-    const mainSection = document.querySelector("main");
-    const scrollContainer = document.querySelector(".scroll-container");
+    gsap.to("#arrow-svg", {
+        y: 4,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut"
+    });
 
-    if (!mainSection || !scrollContainer) {
-        console.loge("Не знайдено один з елементів для Scroll Line");
+    const scrollLine = document.getElementById("scroll-line");
+
+    if (!scrollLine) {
+        console.warn("Scroll Line елемент не знайдено");
         return;
     }
 
-    // Переміщуємо .scroll-container після main
-    mainSection.insertAdjacentElement("afterend", scrollContainer);
-
     let lastScrollY = window.scrollY;
+    const SCROLL_THRESHOLD = 10;
+
+    // Початково показуємо
+    scrollLine.classList.remove("hidden");
 
     window.addEventListener("scroll", () => {
-        let currentScrollY = window.scrollY;
+        const currentScrollY = window.scrollY;
+        const diff = currentScrollY - lastScrollY;
 
-        if (currentScrollY < lastScrollY) {
-            scrollContainer.classList.remove("hidden"); // Показуємо при скролі вгору
+        if (Math.abs(diff) < SCROLL_THRESHOLD) return;
+
+        if (diff > 0) {
+            // Скрол вниз
+            scrollLine.classList.add("hidden");
         } else {
-            scrollContainer.classList.add("hidden"); // Ховаємо при скролі вниз
+            // Скрол вгору
+            scrollLine.classList.remove("hidden");
         }
 
-        lastScrollY = currentScrollY; // Оновлюємо значення для порівняння
+        lastScrollY = currentScrollY;
     });
 }
