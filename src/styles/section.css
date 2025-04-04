@@ -1,5 +1,5 @@
 section {
-    padding: 100px 20px;
+    padding: 50px 20px;
     background: var(--third-color);
 }
 
@@ -18,36 +18,4 @@ section {
 .hvr-sweep-to-right::before {
     background: var(--primary-color) !important;
     transition: all 0.5s ease !important;
-}
-
-/* ------ */
-.scroll-container {
-    text-align: center;
-        margin: 40px 0;
-        transition: opacity 0.4s ease, transform 0.4s ease;
-        position: relative;
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none;
-}
-
-.line-section {
-    width: 100%;
-    height: 0.5px;
-    /* background-color: var(--secondary-color); */
-    border-radius: 1px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-}
-
-.scroll {
-    display: flex;
-    justify-content: space-between;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.scroll-btn {
-    color: var(--secondary-color);
 }
