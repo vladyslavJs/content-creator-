@@ -14,7 +14,7 @@
 
 .hero-text {
     text-transform: uppercase;
-    font-family: var(--text-header);
+    font-family: var(--header-font);
     color: var(--background-color);
     font-size: 46px;
 }
@@ -66,8 +66,8 @@
 
 }
 
-@media screen and (min-width: 1148px) {
+@media screen and (min-width: 1158px) {
     .hero-text {
-        font-size: 98px;
+        font-size: 90px;
     }
 }
