@@ -13,8 +13,18 @@
     justify-content: center;
     text-align: center;
     max-width: 400px; */
-    font-size: 18px;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 28px;
+    max-width: 600px;
     text-align: center;
     font-weight: 200;
+    color: grey
+}
+
+.color-span {
+    color:var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 400;
 }
