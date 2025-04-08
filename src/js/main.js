@@ -5,6 +5,7 @@ import { animateNav } from "./animation";
 import 'hover.css/css/hover-min.css';
 import { loadSections } from "./loadSection";
 import { setupScrollLine } from "./scroll-line.js";
+import { textScrollAnimation } from "./text-scroll-animation.js";
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -32,5 +33,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     animateNav();
     setupScrollLine();
+    textScrollAnimation();
 
 });
