@@ -2,3 +2,10 @@
     position: relative;
     z-index: 22;
 }
+
+.portfolio-container {
+    display: flex;
+    gap: 15px;
+    margin-right: 15px;
+
+}
