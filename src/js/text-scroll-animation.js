@@ -19,7 +19,7 @@ export function textScrollAnimation() {
     gsap.to(".portfolio-section", {
         scrollTrigger: {
             trigger: ".aboutme-section",
-            start: "top 10%",
+            start: "top 20%",
             end: "bottom top",
             scrub: true,
         },
