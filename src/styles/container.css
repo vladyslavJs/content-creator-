@@ -1,6 +1,8 @@
-.container {
+/* .container {
     padding: 0 40px;
     margin: 0 auto;
+    container-type: inline-size;
+    container-name: main;
 }
 
 @media screen and (min-width: 375px) {
@@ -11,7 +13,6 @@
     }
 }
 
-/* tablet version */
 @media screen and (min-width: 768px) {
     .container {
         width: 736px;
@@ -19,9 +20,17 @@
     }
 }
 
-/* desktop version */
 @media screen and (min-width: 1158px) {
     .container {
         width: 1158px;
     }
+} */
+
+.container {
+    width: clamp(375px, 80vw, 1158px);
+    padding-inline: clamp(16px, 5vw, 40px );
+    margin-inline: auto;
+    container-type: inline-size;
+    container-name: main;
 }
+
