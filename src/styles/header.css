@@ -1,3 +1,4 @@
+/* 
 .active-link {
     color: var(--primary-color);
 }
@@ -19,10 +20,10 @@
     background-color: var(--third-color);
     color: var(--secondary-color);
     z-index: 100;
-}
+} */
 
 /* mobile-menu new version */
-.burger-button-style {
+/* .burger-button-style {
     stroke: var(--secondary-color);
 }
 
@@ -56,11 +57,11 @@
 .mobile-header-container {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 /* ---- */
 
-.close-button-icon {
+/* .close-button-icon {
     position: relative;
     width: 40px;
     height: 40px;
@@ -93,11 +94,11 @@
 .close-button-icon:hover::after {
     background-color: var(--primary-color);
     transition: 0.7s;
-}
+} */
 
 /* ---- */
 
-.nav-list-mobile-menu {
+/* .nav-list-mobile-menu {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -114,10 +115,10 @@
     opacity: 0.5;
     transition: 0.7 ease;
 }
-
+ */
 
 /* socail media container */
-.social-media-container {
+/* .social-media-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -177,5 +178,161 @@
     .socail-media-list {
         font-size: 18px;
         gap: 10px;
+    }
+} */
+
+/* global st  */
+.active-link {
+    color: var(--primary-color);
+}
+
+.logo-main {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 200;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(12px, 2vw, 20px);
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    z-index: 100;
+}
+
+/* mobile menu */
+.burger-button-style {
+    stroke: var(--secondary-color);
+}
+
+.mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7777;
+    transform: translateY(-100%);
+    transition: transform 550ms ease-in-out;
+    visibility: hidden;
+}
+
+.mobile-menu.active {
+    transform: translateY(0%);
+    visibility: visible;
+}
+
+.mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: clamp(12px, 2vw, 20px);
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    container-type: inline-size;
+}
+
+.mobile-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* close btn */
+.close-button-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-button-icon::before,
+.close-button-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+.close-button-icon::before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.close-button-icon::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.close-button-icon:hover::before,
+.close-button-icon:hover::after {
+    background-color: var(--primary-color);
+    transition: background-color 0.7s ease;
+}
+
+/* navigation list  */
+.nav-list-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: clamp(2.875rem, 6vw, 5.375rem);
+    font-weight: clamp(400, 1vw, 300);
+    margin-top: clamp(0px, 4vw, 40px);
+    text-transform: uppercase;
+    line-height: 0.9em;
+    cursor: pointer;
+}
+
+.opacity-about {
+    transition: color 0.7s ease, opacity 0.7s ease;
+}
+
+.opacity-about:hover,
+.opacity-about:focus {
+    color: #808080;
+    opacity: 0.5;
+}
+
+/* social media container */
+.social-media-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.socail-media-list {
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 1.5vw, 10px);
+    padding: 5px;
+    font-size: clamp(0.75rem, 1.5vw, 1.125rem);
+    background-color: transparent;
+    font-weight: 200;
+}
+
+.color-icon {
+    fill: var(--background-color);
+    stroke: var(--background-color);
+}
+
+.logo {
+    font-size: clamp(0.875rem, 1.5vw, 1.5rem);
+    font-weight: 300;
+}
+
+/* query container */
+@container (min-width: 768px) {
+    .nav-list-mobile-menu {
+        font-weight: 500;
     }
 }
