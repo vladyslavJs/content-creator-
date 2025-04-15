@@ -1,4 +1,4 @@
-.hero-section {
+/* .hero-section {
     position: relative;
     display: flex;
     justify-content: center;
@@ -13,10 +13,11 @@
 }
 
 .hero-text {
-    text-transform: uppercase;
     font-family: var(--header-font);
     color: var(--background-color);
     font-size: 46px;
+    font-weight: 300;
+    text-transform: lowercase;
 }
 
 .first-word {
@@ -33,7 +34,7 @@
 }
 
 .hero-image img {
-    width: 320px;
+    width: 380px;
     animation: floatAnimation 3s ease-in-out infinite;
     background-repeat: no-repeat;
     background-position: center;
@@ -69,5 +70,67 @@
 @media screen and (min-width: 1158px) {
     .hero-text {
         font-size: 90px;
+    }
+} */
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    position: absolute;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero-text {
+    font-family: var(--text-font);
+    color: var(--background-color);
+    font-size: clamp(40px, 5vw, 76px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.first-word {
+    z-index: 1;
+    position: relative;
+    bottom: clamp(20px, 5vw, 60px);
+    right: clamp(20px, 3vw, 40px);
+    
+}
+
+.second-word {
+    position: relative;
+    top: clamp(10px, 5vw, 30px);
+    left: clamp(40px, 8vw, 70px);
+}
+
+.hero-image img {
+    width: clamp(280px, 45vw, 380px);
+    animation: floatAnimation 3s ease-in-out infinite;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Keyframes */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
