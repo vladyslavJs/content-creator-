@@ -9,18 +9,19 @@
 .about-text {
     position: relative;
     display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-    font-size: 28px;
-    max-width: 600px;
+    font-size: clamp(16px, 2vw, 36px);
+    width: clamp(425px, 55vw, 880px);
     text-align: center;
     font-weight: 200;
-    color: grey;
+    color: var(--secondary-hover);
     z-index: 0;
 }
 
+.text-first {
+    font-family: var(--text-font);
+}
+
 .color-span {
-    color:var(--primary-color);
     color: var(--secondary-color);
     font-weight: 200;
 }
