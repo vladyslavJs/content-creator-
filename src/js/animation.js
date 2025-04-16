@@ -1,4 +1,7 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function animateNav() {
     gsap.set(".nav-list-mobile-menu li", {
@@ -26,5 +29,55 @@ export function animateNav() {
             stagger: 0.1,
             ease: "power2.in"
         });
+    });
+}
+
+export function arrowAnimation() {
+    gsap.to("#arrow-svg", {
+        y: 4,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+    });
+
+    gsap.to("#icon-arrow-right", {
+        rotation: 360,
+        duration: 3,
+        repeat: -1,
+        ease: "elastic"
+    });
+}
+
+// export function textAnimation() {
+//     gsap.from(".portfolio-first-text", {
+//         scrollTrigger: {
+//             trigger: ".portfolio-first-text",
+//             start: "top 80%",
+//             toggleActions: "play none none play reset",
+//             markers: false
+//         },
+//         opacity: 0,
+//         duration: 1,
+//         y: 30,
+//         ease: "power2.out"
+//     })
+// }
+
+export function textAnimation() {
+    gsap.from(".portfolio-first-text, .portfolio-second-text, .portfolio-third-text", {
+        scrollTrigger: {
+            trigger: ".portfolio-first-text",
+            start: "top 90%",
+            end: "bottom top",
+            toggleActions: "play play play reset"
+            // markers: false,
+            // scrub: true
+        },
+        opacity: 0,
+        y: 30,
+        duration: 0.5,
+        delay: 0.5,
+        ease: "power1.out"
     });
 }
