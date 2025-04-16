@@ -9,11 +9,11 @@
 .about-text {
     position: relative;
     display: flex;
-    font-size: clamp(16px, 2vw, 36px);
+    font-size: clamp(22px, 4vw, 30px);
     width: clamp(425px, 55vw, 880px);
     text-align: center;
     font-weight: 200;
-    color: var(--secondary-hover);
+    color: var(--grey-color);
     z-index: 0;
 }
 
