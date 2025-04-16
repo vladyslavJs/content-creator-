@@ -1,14 +1,6 @@
 import gsap from "gsap";
 
 export function setupScrollLine() {
-    gsap.to("#arrow-svg", {
-        y: 4,
-        duration: 1,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut"
-    });
-
     const scrollLine = document.getElementById("scroll-line");
 
     if (!scrollLine) {
