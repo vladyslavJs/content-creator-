@@ -4,16 +4,19 @@ section {
     background: transparent;
 }
 
-[data-section] {
-    display: none;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+section {
+    border: 2px dashed blue;
+}
 
+[data-section] {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
 }
 
 [data-section].loaded {
-    display: block;
     opacity: 1;
+    pointer-events: auto;
 }
 
 .hvr-sweep-to-right::before {

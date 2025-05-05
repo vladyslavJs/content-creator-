@@ -1,101 +1,39 @@
-/* .portfolio-section {
-    position: relative;
-    z-index: 22;
-}
-
-.portfolio-container {
-    display: flex;
-    gap: 25px;
-    margin-right: 15px;
-}
-
-.portfolio-container img {
-    width: 650px;
-}
-
-.portfolio-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 18px;
-}
-
-.portfolio-first-text {
-    font-weight: 200;
-    font-size: 15px;
-}
-
-.portfolio-second-text {
-    font-size: 20px;
-}
-
-.portfolio-third-text {
-    font-size: 16px;
-}
-
-.portfolio-button {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: var(--background-color);
-    border: 1px solid var(--background-color);
-    justify-content: center;
-    padding: 10px 15px;
-    height: 50px;
-    width: 250px;   
-}
-
-.portfolio-button:hover,
-.portfolio-button:focus {
-    background-color:var(--secondary-hover); 
-    transition: var(--transition-animation);
-}
-
-.icon-arrow-right {
-    stroke: var(--secondary-color);
-    width: 25px;
-    height: 25px;
-
-}
-
-.portfolio-span {
-    color: var(--secondary-hover);
-} */
-
 .portfolio-section {
     position: relative;
-    z-index: 22;
-    padding: clamp(16px, 4vw, 40px);
+    padding: clamp(16px, 12vw, 60px);
     container-type: inline-size;
     container-name: portfolio;
+    padding-bottom: clamp(16px, 4vw, 40px);
+    overflow: hidden;
+
+    outline: 2px dashed red;
+    min-height: 10px;    
+}
+
+.portfolio-inner {
+    will-change: transform;
 }
 
 .portfolio-container {
     display: flex;
     flex-direction: column;
-    gap: clamp(16px, 3vw, 40px);
+    gap: clamp(24px, 4vw, 64px);
     margin-right: clamp(0px, 2vw, 15px);
     container-type: inline-size;
 }
 
-/* .portfolio-container img {
-    width: clamp(280px, 45vw, 650px);
-    height: auto;
-    object-fit: cover;
-} */
-
 .image-slider {
-    overflow: hidden;
-    position: relative; 
-    object-fit: cover;
-    
+    width: clamp(280px, 40vw, 800px);
+    aspect-ratio: 4 / 3;
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
-.image-slider img {
-    width: clamp(380px, 45vw, 550px);
-    height: auto;
-
-    transition: opacity 0.7s ease-in;
+.im-sldr {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .portfolio-text {
@@ -104,7 +42,7 @@
     justify-content: space-between;
     gap: clamp(12px, 2vw, 24px);
     font-size: clamp(14px, 1.2vw, 18px);
-}
+}   
 
 .portfolio-first-text {
     font-weight: 200;
