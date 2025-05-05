@@ -1,7 +1,9 @@
+import gsap from "gsap";
+
 const images = [
     "src/assets/images/hero-image.JPG",
     "src/assets/images/hero-section.JPG",
-    // "src/assets/images/photographer.jpeg"
+    "src/assets/images/photographer.jpeg"
 ];
 
 let currentIndex = 0;
@@ -9,20 +11,33 @@ let currentIndex = 0;
 export function showNextImage() {
     const sliderImage = document.getElementById("slider-image");
 
-    // Перевіряємо, чи елемент існує
     if (!sliderImage) {
-        console.log("slider-image element not found");
+        console.warn("slider-image not found");
         return;
     }
 
     setInterval(() => {
-        currentIndex = (currentIndex + 1) % images.length;
+        const nextIndex = (currentIndex + 1) % images.length;
 
-        sliderImage.style.opacity = 0;
+        const tl = gsap.timeline();
 
-        setTimeout(() => {
-            sliderImage.src = images[currentIndex];
-            sliderImage.style.opacity = 1;
-        }, 400);
-    }, 4000);
+        tl.to(sliderImage, {
+            duration: 1.2,
+            opacity: 0,
+            filter: "blur(4px)",
+            ease: "power2.inOut",
+            onComplete: () => {
+                sliderImage.src = images[nextIndex];
+            }
+        });
+
+        tl.to(sliderImage, {
+            duration: 1.2,
+            opacity: 1,
+            filter: "blur(0px)",
+            ease: "power2.inOut"
+        });
+
+        currentIndex = nextIndex;
+    }, 3000);
 }
