@@ -12,18 +12,19 @@ export function textScrollAnimation() {
                 end: "bottom top",
                 scrub: true,
             },
-            y: -100,
+            y: 150,
             opacity: 0,
-            scale: 1,
+            scale: 1.2,
         });
-    gsap.to(".portfolio-section", {
-        scrollTrigger: {
-            trigger: ".aboutme-section",
-            start: "top 20%",
-            end: "bottom top",
-            scrub: true,
-        },
-        y: -450,
-    });
+
+    // gsap.to(".portfolio-section", {
+    //     scrollTrigger: {
+    //         trigger: ".aboutme-section",
+    //         start: "top 20%",
+    //         end: "bottom top",
+    //         scrub: true,
+    //     },
+    //     y: -450,
+    // });
 }
 
