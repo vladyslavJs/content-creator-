@@ -14,7 +14,7 @@ export function textScrollAnimation() {
             },
             y: 150,
             opacity: 0,
-            scale: 1.2,
+            scale: 0.4,
         });
 
     // gsap.to(".portfolio-section", {
