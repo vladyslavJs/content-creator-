@@ -1,7 +1,6 @@
 .aboutme-section {
     display: flex;
     justify-content: center;
-    overflow: hidden;
     position: relative;
     z-index: 2;
 }
