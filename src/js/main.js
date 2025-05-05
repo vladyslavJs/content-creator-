@@ -7,7 +7,6 @@ import { loadSections } from "./loadSection";
 import { setupScrollLine } from "./scroll-line.js";
 import { textScrollAnimation } from "./text-scroll-animation.js";
 import { arrowAnimation } from "./animation";
-import { textAnimation } from "./animation";
 import { showNextImage } from "./slider-image.js";
 
 
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupScrollLine();
     textScrollAnimation();
     arrowAnimation();
-    textAnimation();
     showNextImage();
 
 
