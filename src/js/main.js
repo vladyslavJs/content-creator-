@@ -8,6 +8,7 @@ import { setupScrollLine } from "./scroll-line.js";
 import { textScrollAnimation } from "./text-scroll-animation.js";
 import { arrowAnimation } from "./animation";
 import { showNextImage } from "./slider-image.js";
+import { findBlocksScrollAnimation } from "./text-scroll-animation.js";
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     textScrollAnimation();
     arrowAnimation();
     showNextImage();
+    findBlocksScrollAnimation();
 
 
 });
