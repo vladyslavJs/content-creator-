@@ -5,8 +5,6 @@
     container-name: portfolio;
     padding-bottom: clamp(16px, 4vw, 40px);
     overflow: hidden;
-
-    outline: 2px dashed red;
     min-height: 10px;    
 }
 
@@ -42,6 +40,7 @@
     justify-content: space-between;
     gap: clamp(12px, 2vw, 24px);
     font-size: clamp(14px, 1.2vw, 18px);
+    padding: 12px;
 }   
 
 .portfolio-first-text {
@@ -63,10 +62,10 @@
     justify-content: center;
     text-align: center;
     color: var(--background-color);
-    border: 1px solid var(--background-color);
+    border: 1px solid var(--grey-color);
     padding: clamp(8px, 1vw, 10px) clamp(12px, 2vw, 15px);
     height: clamp(40px, 6vw, 50px);
-    width: clamp(180px, 25vw, 250px);
+    width: clamp(130px, 18vw, 205px);
     transition: var(--transition-animation);
 }
 
