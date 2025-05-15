@@ -1,0 +1,33 @@
+.find-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.find-title {
+    text-align: center;
+    font-weight: 200;
+    font-size: 26px;
+    margin-bottom: 80px;
+}
+
+.find-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+}
+
+.find-block {
+    border: 1px solid var(--grey-color);
+    width: 750px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 56px;
+    letter-spacing: -5px;
+    background-color: black;
+    position: relative;
+}
