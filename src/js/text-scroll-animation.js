@@ -26,7 +26,6 @@ export function textScrollAnimation() {
             end: "bottom top",
             scrub: true,
         },
-        // y: -450,
     });
 
     gsap.from(".portfolio-first-text, .portfolio-second-text, .portfolio-third-text", {
