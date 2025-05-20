@@ -22,9 +22,9 @@ export function showNextImage() {
         const tl = gsap.timeline();
 
         tl.to(sliderImage, {
-            duration: 1.2,
-            opacity: 0,
-            filter: "blur(4px)",
+            duration: 1,
+            opacity: 1,
+            filter: "blur(8px)",
             ease: "power2.inOut",
             onComplete: () => {
                 sliderImage.src = images[nextIndex];
@@ -32,7 +32,7 @@ export function showNextImage() {
         });
 
         tl.to(sliderImage, {
-            duration: 1.2,
+            duration: 1,
             opacity: 1,
             filter: "blur(0px)",
             ease: "power2.inOut"
