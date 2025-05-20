@@ -27,7 +27,9 @@
     justify-content: center;
     font-weight: 600;
     font-size: 56px;
-    letter-spacing: -5px;
-    background-color: black;
+    letter-spacing: -2px;
+    font-family: var(--creativy-font);
+    background-color: var(--third-color);
+    color: var(--primary-color);
     position: relative;
 }
